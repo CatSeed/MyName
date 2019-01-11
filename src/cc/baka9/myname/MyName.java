@@ -390,13 +390,13 @@ public class MyName extends JavaPlugin {
 
 		/** 是否过期 */
 		public boolean isOverdue() {
-			return System.currentTimeMillis() >= this.startDate + (1000 * 60 * 60 * 24 * this.time);
+			return System.currentTimeMillis() >= this.startDate + (1000L * 60 * 60 * 24 * this.time);
 		}
 
 		/** 剩余天数 */
 		public int getSurplusDay() {
 			long now = System.currentTimeMillis();
-			long end = this.startDate + (long) (1000 * 60 * 60 * 24 * this.time);
+			long end = this.startDate + (long) (1000L * 60 * 60 * 24 * this.time);
 			return (int) ((end - now) / (1000 * 60 * 60 * 24));
 		}
 

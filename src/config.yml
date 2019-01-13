@@ -38,28 +38,4 @@ Message_nothaveitem: '&a你没有相应的改名卡/龙蛋'
 Message_nothavemoney: '&a你没有&6{money}游戏币'
 Message_time: '&a昵称剩余天数 &6{day}'
 Message_set: '&a你没有昵称,所以无法修改,你需要先&6/SetNick 昵称&a设置一个昵称'
-Names:
-  xiao_bao:
-    name: 骚baba
-    time: 6
-    date: 2019/01/11
-  a_xiumu:
-    name: 子念是我亲爱的mua
-    time: 13
-    date: 2019/01/11
-  noel:
-    name: 我叫DJ李大牛
-    time: 16
-    date: 2019/01/11
-  cheney:
-    name: 如故
-    time: 16
-    date: 2019/01/11
-  fengz:
-    name: Mars丶楓葉
-    time: 16
-    date: 2019/01/11
-  sldemperpr:
-    name: 是念念呐
-    time: 30
-    date: 2019/01/11
+Names: {}

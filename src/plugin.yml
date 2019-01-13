@@ -1,0 +1,9 @@
+name: MyName
+main: cc.baka9.myname.MyName
+version: 2.0
+description: Name changing plugin!
+commands:
+  setnick:
+    description: Change your name!
+  renick:
+    description: Reset names!

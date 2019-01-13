@@ -1,0 +1,65 @@
+BlackList:
+- 服主
+- 管理
+- 腐竹
+- 辅助
+- 技术
+- 服务器
+- 客服
+- 种子
+- 老子
+- 爸
+- 妈
+- 爹
+- 傻逼
+- 'null'
+- 媽
+- 退服
+- 麒麟
+- 粽子
+- 吃饭
+- 散人
+MaxLength: 10
+MaxTime: 32
+Item: 122
+LoreRegex: '&e自定义昵称(\d+)天'
+Money: 50000
+Prefix: '&b[&9昵称&b]'
+Message_use: '&a请使用正确的指令&6/SetNick 昵称&a昵称不能有空格'
+Message_length: '&a你设置的昵称太长了最多为&6 {length} &a的长度'
+Message_taken: '&a你设置的这个昵称已经存在了,或者这个昵称是其他玩家的名字'
+Message_ban: '&a含有非法的字符,不允许设置成昵称'
+Message_ok: '&a昵称设置成功&6有效期{time}天&a如果你要修改它请输入&6/ReNick&a你现在的昵称为{nick}'
+Message_reok: '&6消费了{money}游戏币&a修改成功!你现在的昵称为{nick}'
+Message_colour: '&a不能加入颜色代码'
+Message_renickuse: '&6消费{money}游戏币&a输入&6/ReNick 昵称&a来修改昵称'
+Message_reset: '&a你已经设置过昵称了,如果要修改请&6消费{money}游戏币&a输入&6/ReNick 昵称&a来修改昵称'
+Message_nothaveitem: '&a你没有相应的改名卡/龙蛋'
+Message_nothavemoney: '&a你没有&6{money}游戏币'
+Message_time: '&a昵称剩余天数 &6{day}'
+Message_set: '&a你没有昵称,所以无法修改,你需要先&6/SetNick 昵称&a设置一个昵称'
+Names:
+  xiao_bao:
+    name: 骚baba
+    time: 6
+    date: 2019/01/11
+  a_xiumu:
+    name: 子念是我亲爱的mua
+    time: 13
+    date: 2019/01/11
+  noel:
+    name: 我叫DJ李大牛
+    time: 16
+    date: 2019/01/11
+  cheney:
+    name: 如故
+    time: 16
+    date: 2019/01/11
+  fengz:
+    name: Mars丶楓葉
+    time: 16
+    date: 2019/01/11
+  sldemperpr:
+    name: 是念念呐
+    time: 30
+    date: 2019/01/11

@@ -16,6 +16,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -39,15 +40,20 @@ public class MyName extends JavaPlugin {
 		if (!setupEconomy()) getLogger().info("没有检测到vault前置插件");
 		getServer().getPluginManager().registerEvents(new Listener() {
 
-			@EventHandler
+			@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
 			public void onPlayerChat(AsyncPlayerChatEvent e) {
 				Player p = e.getPlayer();
 				String playerName = p.getName().toLowerCase();
 				MyNamePlayer myNamePlayer = Config.getMyNamePlayer(playerName);
 				if (myNamePlayer == null) return;
-				String chatName = p.getDisplayName().toLowerCase().replace(playerName,
-						"§6" + myNamePlayer.getNick() + "§c(§b" + playerName + "§c)" + "§f");
-				e.setFormat(e.getFormat().replace("%1$s", "{jobs} " + chatName));
+				e.setFormat(e.getFormat().replace("%1$s", "%1$s{myName}"));
+			}
+
+			@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+			public void onPlayerChatHighest(AsyncPlayerChatEvent event) {
+				MyNamePlayer myNamePlayer = Config.getMyNamePlayer(event.getPlayer().getName());
+				if (myNamePlayer == null) return;
+				event.setFormat(event.getFormat().replace("{myName}", "§c(§6" + myNamePlayer.getNick() + "§c)"));
 			}
 
 			@EventHandler
